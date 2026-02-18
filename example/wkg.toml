@@ -1,0 +1,3 @@
+[overrides]
+"docs:calculator" = { path = "../calculator/wit" }
+"docs:adder" = { path = "../adder/wit" }

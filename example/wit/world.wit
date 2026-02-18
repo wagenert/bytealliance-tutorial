@@ -1,0 +1,6 @@
+package docs:app@0.1.0;
+
+world app {
+    import docs:calculator/calculate@0.1.0;
+    export wasi:cli/run@0.2.7;
+}
