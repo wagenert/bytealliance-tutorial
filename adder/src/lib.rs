@@ -1,6 +1,6 @@
 mod bindings {
     wit_bindgen::generate!({
-        path: "../wit/adder/world.wit",
+        path: "wit/world.wit",
     });
 
     use super::AdderComponent;

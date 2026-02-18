@@ -318,6 +318,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e748733b7cbc798e1434b6ac524f0c1ff2ab456fe201501e6497c8417a4fc33"
 
 [[package]]
+name = "calculator"
+version = "0.1.0"
+dependencies = [
+ "wit-bindgen-rt",
+]
+
+[[package]]
 name = "cap-fs-ext"
 version = "3.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3072,6 +3079,15 @@ dependencies = [
  "anyhow",
  "heck",
  "wit-parser 0.245.1",
+]
+
+[[package]]
+name = "wit-bindgen-rt"
+version = "0.44.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "653c85dd7aee6fe6f4bded0d242406deadae9819029ce6f7d258c920c384358a"
+dependencies = [
+ "bitflags",
 ]
 
 [[package]]

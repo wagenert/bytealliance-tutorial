@@ -10,7 +10,7 @@ use crate::state::States;
 
 mod bindings {
     wasmtime::component::bindgen!({
-        path: "../wit/adder/world.wit",
+        path: "../adder/wit/world.wit",
         world: "adder",
         imports: { default: async },
         exports: { default: async },
