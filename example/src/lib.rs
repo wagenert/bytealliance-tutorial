@@ -1,14 +1,16 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+mod bindings {
+    use super::Component;
+    wit_bindgen::generate!({ generate_all });
+    export!(Component);
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+struct Component;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl bindings::exports::wasi::cli::run::Guest for Component {
+    #[doc = "/ Run the program."]
+    #[allow(async_fn_in_trait)]
+    fn run() -> Result<(), ()> {
+        bindings::docs::calculator::calculate::eval_expression("1 + 2");
+        Ok(())
     }
 }
